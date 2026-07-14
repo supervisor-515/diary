@@ -1,0 +1,53 @@
+\documentclass[10pt,a4paper,landscape]{article}
+\usepackage[margin=7mm]{geometry}
+\usepackage{xcolor,array}
+\setlength{\parindent}{0pt}
+\setlength{\fboxsep}{2.2mm}
+\setlength{\fboxrule}{0.35pt}
+\pagestyle{empty}
+\newcommand{\cb}{$\square$}
+\newcommand{\score}{\(\bigcirc\)1\quad\(\bigcirc\)2\quad\(\bigcirc\)3\quad\(\bigcirc\)4\quad\(\bigcirc\)5}
+\newcommand{\dressbox}[1]{%
+\fbox{\parbox[t][52mm][t]{0.455\textwidth}{%
+{\large\bfseries Dress #1}\hfill{\bfseries Score }\score\\[1mm]
+{\bfseries Memory nickname}\ \hrulefill\\[1.3mm]
+{\bfseries Shape}\quad \cb\ A-line\quad \cb\ Ball gown\quad \cb\ Mermaid\quad \cb\ Slim\\[1.1mm]
+{\bfseries Neck / sleeves}\quad \cb\ Straight\quad \cb\ Sweetheart\quad \cb\ Square\quad \cb\ V-neck\quad \cb\ Off-shoulder\quad \cb\ Sleeves\\[1.1mm]
+{\bfseries Fabric / detail}\quad \cb\ Silk\quad \cb\ Lace\quad \cb\ Beads\quad \cb\ Flowers\quad \cb\ Bow\quad \cb\ Sparkle\\[1.1mm]
+{\bfseries Best feature}\quad \cb\ Face\quad \cb\ Neck/shoulders\quad \cb\ Arms\quad \cb\ Waist\quad \cb\ Overall\\[1.2mm]
+{\bfseries Concern}\ \hrulefill\\[1.6mm]
+{\bfseries One-line note}\ \hrulefill\\[1.6mm]
+{\bfseries Try again}\quad \cb\ Yes\qquad \cb\ Maybe\qquad \cb\ No
+}}}
+\newcommand{\shopsum}{%
+\fbox{\parbox[t][29mm][t]{0.965\textwidth}{%
+{\large\bfseries Shop Summary}\qquad
+{\bfseries Best dress}\ \rule{13mm}{0.3pt}\qquad
+{\bfseries 2nd}\ \rule{13mm}{0.3pt}\qquad
+{\bfseries Benefits / extra fees}\ \hrulefill\\[1.5mm]
+{\bfseries Face looks best}\ \score\qquad
+{\bfseries Body proportions}\ \score\qquad
+{\bfseries Dress quality}\ \score\\[1.5mm]
+{\bfseries All four dresses}\ \score\qquad
+{\bfseries Styling / service}\ \score\qquad
+{\bfseries Choose this shop?}\ \cb\ Yes\quad \cb\ Maybe\quad \cb\ No\\[1.3mm]
+{\bfseries One-line reason}\ \hrulefill
+}}}
+\newcommand{\finalrank}{%
+\vspace{1.5mm}\fbox{\parbox[t][10mm][c]{0.965\textwidth}{%
+{\bfseries Final ranking}\quad 1st\ \rule{31mm}{0.3pt}\quad 2nd\ \rule{31mm}{0.3pt}\quad 3rd\ \rule{31mm}{0.3pt}\qquad
+{\bfseries Decision tip:} Choose the shop where all four dresses consistently flatter her face and proportions, not just one standout dress.
+}}}
+\newcommand{\shopform}[2]{%
+\fontsize{7.6}{9.2}\selectfont
+\colorbox{black}{\parbox{0.978\textwidth}{\color{white}\Large\bfseries Tanner · #1 Dress Review\hfill Appointment #2}}\\[1.5mm]
+\textbf{Important:} Write before hearing anyone else's opinion. Photos are not allowed, so always add a \textbf{memory nickname and concern}.\\[1.6mm]
+\dressbox{1}\hfill\dressbox{2}\\[1.5mm]
+\dressbox{3}\hfill\dressbox{4}\\[1.8mm]
+\shopsum
+}
+\begin{document}
+\shopform{Wooarr}{2:00 PM}\newpage
+\shopform{Saint Helena}{5:00 PM}\newpage
+\shopform{Selene Wedding}{7:00 PM}\finalrank
+\end{document}
