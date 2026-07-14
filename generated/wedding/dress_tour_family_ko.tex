@@ -1,0 +1,60 @@
+\documentclass[10pt,a4paper,landscape]{article}
+\usepackage[margin=7mm]{geometry}
+\usepackage{kotex}
+\usepackage{xcolor,array}
+\setlength{\parindent}{0pt}
+\setlength{\fboxsep}{2.2mm}
+\setlength{\fboxrule}{0.35pt}
+\pagestyle{empty}
+\newcommand{\cb}{$\square$}
+\newcommand{\score}{\(\bigcirc\)1\quad\(\bigcirc\)2\quad\(\bigcirc\)3\quad\(\bigcirc\)4\quad\(\bigcirc\)5}
+\newcommand{\dressbox}[1]{%
+\fbox{\parbox[t][52mm][t]{0.455\textwidth}{%
+{\large\bfseries 드레스 #1}\hfill{\bfseries 점수 }\score\\[1mm]
+{\bfseries 기억 별명}\ \hrulefill\\[1.3mm]
+{\bfseries 라인}\quad \cb\ A라인\quad \cb\ 벨라인\quad \cb\ 머메이드\quad \cb\ 슬림\\[1.1mm]
+{\bfseries 목선/팔}\quad \cb\ 일자\quad \cb\ 하트\quad \cb\ 스퀘어\quad \cb\ 브이\quad \cb\ 오프숄더\quad \cb\ 소매\\[1.1mm]
+{\bfseries 소재/포인트}\quad \cb\ 실크\quad \cb\ 레이스\quad \cb\ 비즈\quad \cb\ 꽃\quad \cb\ 리본\quad \cb\ 반짝임\\[1.1mm]
+{\bfseries 제일 예쁜 곳}\quad \cb\ 얼굴\quad \cb\ 목/어깨\quad \cb\ 팔\quad \cb\ 허리\quad \cb\ 전체\\[1.2mm]
+{\bfseries 아쉬운 점}\ \hrulefill\\[1.6mm]
+{\bfseries 한마디}\ \hrulefill\\[1.6mm]
+{\bfseries 다시 입혀보기}\quad \cb\ 예\qquad \cb\ 고민\qquad \cb\ 아니오
+}}}
+\newcommand{\shopsum}{%
+\fbox{\parbox[t][29mm][t]{0.965\textwidth}{%
+{\large\bfseries 샵 총평}\qquad
+{\bfseries 1등 드레스}\ \rule{13mm}{0.3pt}\qquad
+{\bfseries 2등}\ \rule{13mm}{0.3pt}\qquad
+{\bfseries 혜택/추가금}\ \hrulefill\\[1.5mm]
+{\bfseries 얼굴이 예뻐 보임}\ \score\qquad
+{\bfseries 몸매/비율}\ \score\qquad
+{\bfseries 고급스러움}\ \score\\[1.5mm]
+{\bfseries 4벌 평균}\ \score\qquad
+{\bfseries 스타일링/응대}\ \score\qquad
+{\bfseries 이 샵 선택?}\ \cb\ 예\quad \cb\ 고민\quad \cb\ 아니오\\[1.3mm]
+{\bfseries 한 줄 이유}\ \hrulefill
+}}}
+\newcommand{\finalrank}{%
+\vspace{1.5mm}\fbox{\parbox[t][10mm][c]{0.965\textwidth}{%
+{\bfseries 최종 순위}\quad 1위\ \rule{31mm}{0.3pt}\quad 2위\ \rule{31mm}{0.3pt}\quad 3위\ \rule{31mm}{0.3pt}\qquad
+{\bfseries 결정 팁:} 한 벌만 압도적인 곳보다 4벌 평균이 높고 얼굴·비율이 계속 예쁜 샵.
+}}}
+\newcommand{\shopform}[3]{%
+\fontsize{7.6}{9.2}\selectfont
+\colorbox{black}{\parbox{0.978\textwidth}{\color{white}\Large\bfseries #1 · #2 드레스 평가표\hfill 예약 #3}}\\[1.5mm]
+\textbf{중요:} 다른 사람의 말을 듣기 전에 먼저 적기. 사진을 못 찍으니 \textbf{기억 별명과 아쉬운 점}을 꼭 쓰기.\\[1.6mm]
+\dressbox{1}\hfill\dressbox{2}\\[1.5mm]
+\dressbox{3}\hfill\dressbox{4}\\[1.8mm]
+\shopsum
+}
+\begin{document}
+\shopform{엄마}{우아르}{14:00}\newpage
+\shopform{엄마}{세인트헬레나}{17:00}\newpage
+\shopform{엄마}{셀레네웨딩}{19:00}\finalrank\newpage
+\shopform{아빠}{우아르}{14:00}\newpage
+\shopform{아빠}{세인트헬레나}{17:00}\newpage
+\shopform{아빠}{셀레네웨딩}{19:00}\finalrank\newpage
+\shopform{승수}{우아르}{14:00}\newpage
+\shopform{승수}{세인트헬레나}{17:00}\newpage
+\shopform{승수}{셀레네웨딩}{19:00}\finalrank
+\end{document}
